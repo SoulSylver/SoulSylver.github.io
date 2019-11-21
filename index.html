@@ -4,4 +4,91 @@
 <h1>Bai sarmale</h1>
 <p>Hai ca merge siteu, sarumana sa traiesti si sati dea dumnezeu sanatate si maicuta domnului!</p>
 </body>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#band" class="w3-button w3-bar-item">Band</a>
+  <a href="#tour" class="w3-button w3-bar-item">Tour</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="img_band_la.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img_band_ny.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img_band_chicago.jpg"
+  style="width:100%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">The 3 Tamamos</h2>
+  <p class="w3-opacity"><i>Best waifu</i></p>
+  <p class="w3-justify">I miss the old Harambe. Straight from the zoo Harambe. Eating his food Harambe. No attitude Harambe. I hate the new Harambe. Shot by a dude Harambe. The Youtube views Harambe. Up in the news Harambe. I miss the sweet Harambe. Playing with kids Harambe. I gotta say at that time I'd like to meet Harambe. See I invented Harambe. It wasnt any Harambes. And now i look and look around and there's no more Harambes.</p>
+</section>
+
+<!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <p>Tamamo</p>
+    <img src="tama1.jpg" alt="Random Name" style="width:80%">
+    <p>The prettiest.</p>
+  </article>
+  <article class="w3-third">
+    <p>Tamamo vitch</p>
+    <img src="tama2.jpg" alt="Random Name" style="width:80%">
+    <p>The smartest.</p>
+  </article>
+  <article class="w3-third">
+    <p>Tamamo cat</p>
+    <img src="tama3.png" alt="Random Name" style="width:80%">
+    <p>The funniest.</p>
+  </article>
+</section>
+
+<section>
+<iframe src="https://steamdb.info/embed/?appid=976310" height="370px" width="100%" scrolling="no" frameborder="1"></iframe>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+</body>
 </html>
+
