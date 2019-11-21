@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Bai sarmale</h1>
-<p>Hai ca merge siteu, sarumana sa traiesti si sati dea dumnezeu sanatate si maicuta domnului!</p>
+<h1>Welcome!</h1>
+<p>Gave up for now, i'm just gonna make this static for and unordered for the time being.</p>
 </body>
 
 <meta charset="UTF-8">
@@ -10,6 +10,12 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <body>
+
+<section>
+	<iframe src="https://steamdb.info/embed/?appid=838380" height="370px" width="40%" scrolling="no" frameborder="0"></iframe>
+	<iframe src="https://steamdb.info/embed/?appid=389730" height="370px" width="40%" scrolling="no" frameborder="0"></iframe>
+	<iframe src="https://steamdb.info/embed/?appid=976310" height="370px" width="40%" scrolling="no" frameborder="0"></iframe>
+</section>
 
 <!-- Navigation -->
 <nav class="w3-bar w3-black">
@@ -21,22 +27,40 @@
 
 <!-- Slide Show -->
 <section>
-  <img class="mySlides" src="img_band_la.jpg"
-  style="width:100%">
-  <img class="mySlides" src="img_band_ny.jpg"
-  style="width:100%">
-  <img class="mySlides" src="img_band_chicago.jpg"
-  style="width:100%">
+  <img class="mySlides" src="img1.png"
+  style="height:600px">
+  <img class="mySlides" src="img2.png"
+  style="height:600px">
+  <img class="mySlides" src="img3.jpg"
+  style="height:600px">
+  <img class="mySlides" src="img4.jpg"
+  style="height:600px">
+  <img class="mySlides" src="img5.jpg"
+  style="height:600px">
+  <img class="mySlides" src="img6.jpg"
+  style="height:600px">
 </section>
 
 <section>
 	appId = 570
-    <iframe src="https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=570"+appId></iframe>
+    <iframe src="https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=570"></iframe>
 </section>
+
+<p>Using Metacharacter "\d" with the "match()" method to get only numbers from a string!</p>
+    <input type="button" id="bt" value="Click it!" onclick="getNumberFromString()" />
+	
+<script>
+	function getNumberFromString () {
+		var pNumber = 'https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=570';
+    	var tName = 'arun_4874';
+        alert(pNumber.match(/\d+/));
+    }
+</script>
 
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
 Click me to display Date and Time.</button>
+
 
 <p id="demo"></p>
 
@@ -66,9 +90,7 @@ Click me to display Date and Time.</button>
   </article>
 </section>
 
-<section>
-	<iframe src="https://steamdb.info/embed/?appid=976310" height="370px" width="100%" scrolling="no" frameborder="1"></iframe>
-</section>
+
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
@@ -81,6 +103,8 @@ Click me to display Date and Time.</button>
   Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
   </p>
 </footer>
+
+</body>
 
 <script>
 // Automatic Slideshow - change image every 3 seconds
@@ -98,6 +122,63 @@ function carousel() {
   x[myIndex-1].style.display = "block";
   setTimeout(carousel, 3000);
 }
+</script>
+
+<script>
+var getJSON = function(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    xhr.onload = function() {
+      var status = xhr.status;
+      if (status === 200) {
+        callback(null, xhr.response);
+      } else {
+        callback(status, xhr.response);
+      }
+    };
+    xhr.send();
+};
+</script>
+
+<script>
+$.getJSON( "ajax/test.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+});
+</script>
+
+<section>
+$.getJSON('http://query.yahooapis.com/v1/public/yql?q=select%20%2a%20from%20yahoo.finance.quotes%20WHERE%20symbol%3D%27WRC%27&format=json&diagnostics=true&env=store://datatables.org/alltableswithkeys&callback', function(data) {
+    //data is the JSON string
+	<input type="button" id="bt" value="Click it!" onclick="JSON" />
+});
+</section>
+
+<script>
+(function() {
+  var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
 </script>
 
 </body>
