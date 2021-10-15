@@ -6,39 +6,30 @@
 <meta name="twitter:creator" content="@SoulSylver">
 <meta name="twitter:title" content="Soul's website">
 <meta name="twitter:description" content="Hello 🍝">
-<meta name="twitter:image" content="https://soulsylver.github.io/Resources/Images/img2.png">
+<meta name="twitter:image" content="https://soulsylver.github.io/Resources/Images/notlikewolfgoogly.png">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="soul.css">
 
 <body>
+<section>
+	<<h1>Experimental features 🍕</h1>
+	<p>McPuisor 🍔</p>
+<img src="Resources/Images/McPuisor.png" alt="Random Name" style="width:30%">
+</section>
 
 <section>
-	<p>appId = 838380 DoA6</p>
-    <iframe src="https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=838380"></iframe>
-	<p>appId = 389730 Tekken 7</p>
-    <iframe src="https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=389730"></iframe>
-	<p>appId = 976310 MK11</p>
-    <iframe src="https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=976310"></iframe>
-</section>
-	
-<section>
-	<p>Using Metacharacter "\d" with the "match()" method to get only numbers from a string!</p>
-    <input type="button" id="bt" value="Click it!" onclick="getNumberFromString()" />
+	<p>Destiny 2, appId 1085660</p>
+    <iframe src="https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=1085660"></iframe>
 </section>
 
 <section>
 	<button type="button"
-	onclick="document.getElementById('demo').innerHTML = Date()">
+onclick="document.getElementById('demo').innerHTML = Date()">
 	Click me to display Date and Time.</button>
 	<p id="demo"></p>
 </section>
 
 </body>
-
-<script>
-	function getNumberFromString () {
-		var pNumber = 'https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?format=json&appid=570';
-    	var tName = 'arun_4874';
-        alert(pNumber.match(/\d+/));
-    }
-</script>
 
 </html>
